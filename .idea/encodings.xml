@@ -3,33 +3,26 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/com" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/han/Main.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/Main.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0001_hello_world.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0001_hello_world.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0034_DataType.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0034_DataType.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0052_AutoConvertDetail.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0052_AutoConvertDetail.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0057_StringToBasic.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0057_StringToBasic.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0064Arithmetic_IPlusPlus_PlusPlusI_.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0064Arithmetic_IPlusPlus_PlusPlusI_.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0158Array.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0158Array.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0192_ClassAndObject.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0192_ClassAndObject.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0200_Person.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0200_Person.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0201_Method.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0201_Method.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0213_MethodParameter01.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0213_MethodParameter01.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0585_Thread.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0585_Thread.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0586_SellTicket.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P0586_SellTicket.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P308_Poly.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/han/P308_Poly.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/han/p0409/InterfaceDetail01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/han/p0409/InterfaceDetail02.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/han/p0409/InterfaceExercise01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/han/p0409/InterfaceExercise02.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/han/p0409/InterfacePolyParameter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/han/p0409/InterfacePolyPass.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/han/p0412/AnonymousInnerClass.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
