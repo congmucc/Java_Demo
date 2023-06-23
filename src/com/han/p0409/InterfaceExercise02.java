@@ -1,4 +1,4 @@
-package com.hspedu.interface_;
+package com.han.p0409;
 
 public class InterfaceExercise02 {
     public static void main(String[] args) {
