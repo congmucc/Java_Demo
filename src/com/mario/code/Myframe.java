@@ -123,10 +123,10 @@ public class Myframe extends JFrame implements KeyListener, Runnable {
         if (e.getKeyCode() == 68) {
             mario.rightStop();
         }
-        // 跳跃，w或者空格       马里奥遁地
-        if (e.getKeyCode() == 87 || e.getKeyCode() == 32) {
-            mario.fall();
-        }
+        // // 跳跃，w或者空格       马里奥遁地
+        // if (e.getKeyCode() == 87 || e.getKeyCode() == 32) {
+        //     mario.fall();
+        // }
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.han;
+package com.han.p0580_Thread;
 
 public class P0585_Thread {
     public static void main(String[] args) {

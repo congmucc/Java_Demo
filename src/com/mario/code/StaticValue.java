@@ -27,7 +27,7 @@ public class StaticValue {
     public static BufferedImage gan = null;
 
     // 路径前缀，方便后续调用
-    public static String imagePath = System.getProperty("user.dir") + "/src/images/";
+    public static String imagePath = System.getProperty("user.dir") + "/src/com/mario/images/";
     public static void init() throws IOException {
         // 导入马里奥的状态图片
 
