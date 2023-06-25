@@ -15,6 +15,8 @@ public class HspTankGame01 extends JFrame {
 
     public HspTankGame01() {
         mp = new MyPanel();
+        Thread thread = new Thread(mp);
+        thread.start();
         this.add(mp);// 把面板加入进去
         // 设置窗口大小
         this.setSize(1000, 750);

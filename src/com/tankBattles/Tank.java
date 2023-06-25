@@ -1,11 +1,16 @@
 package com.tankBattles;
 
+import java.util.Vector;
+
 public class Tank {
     // 坦克坐标
     private int x;
     private int y;
     private int speed = 2;// 坦克速度
     private int direct;// 坦克的方向 0 1 2 3  表示上右下左
+    // 判断是否存活
+    boolean isLive = true;
+
 
     public Tank(int x, int y) {
         this.x = x;
@@ -20,25 +25,26 @@ public class Tank {
         this.direct = direct;
     }
 
-    // 向上移动
+    // 向上移动0
     public void moveUp() {
-        y -= speed;
+        // 加上边界
+        if (y - this.speed > 0) y -= speed;
+
     }
-    // 向右移动
+    // 向右移动1
     public void moveRight() {
-        x += speed;
+        if (x + this.speed < 940) x += speed;
     }
-    // 向下移动
+    // 向下移动2
     public void moveDown() {
-        y += speed;
+        if (y + this.speed < 660) y += speed;
+
     }
-    // 向左移动
+    // 向左移动3
     public void moveLeft() {
-        x -= speed;
+        if (x - this.speed > 0) x -= speed;
+
     }
-
-
-
 
 
     public int getX() {
