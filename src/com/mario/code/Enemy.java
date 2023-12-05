@@ -87,7 +87,7 @@ public class Enemy implements Runnable {
                     canRight = false;
                 }
                 // 判断是否可以向左走
-                if (ob1.getX() == this.x - 36 && (ob1.getY() + 65 > this.y && ob1.getY() - 35 < this.y)) {
+                if ((ob1.getX() - this.x + 36  >= 5) && (ob1.getX() - this.x + 36  <= 10) && (ob1.getY() + 65 > this.y && ob1.getY() - 35 < this.y)) {
                     canLeft = false;
                 }
             }

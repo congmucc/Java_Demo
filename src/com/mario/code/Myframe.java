@@ -16,6 +16,10 @@ public class Myframe extends JFrame implements KeyListener, Runnable {
     private BackGround nowBg = new BackGround();
     //用于双缓存
     private Image offScreenImage = null;
+
+    //用于音乐
+    AePlayWave aePlayWave = new AePlayWave("src/com/mario/music/backgroundMusic.wav");
+
     // 定义一个马里奥对象
     private Mario mario = new Mario();
     // 定义一个线程对象，实现马里奥的运动
@@ -52,6 +56,7 @@ public class Myframe extends JFrame implements KeyListener, Runnable {
         //绘制图片
         repaint();
         thread.start();
+        aePlayWave.start();
     }
 
 
@@ -82,6 +87,12 @@ public class Myframe extends JFrame implements KeyListener, Runnable {
 
         // 绘制旗杆
         graphics.drawImage(nowBg.getGan(), 500, 220, this);
+
+        // 添加分数
+        Color c = graphics.getColor();
+        graphics.setColor(Color.RED);
+        graphics.setFont(new Font("圆体", Font.BOLD, 30));
+        graphics.drawString("分数：" + mario.getScore(), 300, 100);
 
         // 绘制马里奥
         graphics.drawImage(mario.getShow(), mario.getX(), mario.getY(), this);
@@ -123,11 +134,12 @@ public class Myframe extends JFrame implements KeyListener, Runnable {
         if (e.getKeyCode() == 68) {
             mario.rightStop();
         }
-        // // 跳跃，w或者空格       马里奥遁地
-        // if (e.getKeyCode() == 87 || e.getKeyCode() == 32) {
-        //     mario.fall();
-        // }
+//        // 跳跃，w或者空格       马里奥遁地
+//        if (e.getKeyCode() == 87 || e.getKeyCode() == 32) {
+//            mario.fall();
+//        }
     }
+
 
     @Override
     public void run() {
@@ -145,12 +157,16 @@ public class Myframe extends JFrame implements KeyListener, Runnable {
                 }
 
                 if (mario.isDeath()) {
+                    // 让背景音乐结束
+                    aePlayWave.setStop(true);
+                    new AePlayWave("src/com/mario/music/dead.wav").start();
                     JOptionPane.showConfirmDialog(this, "Mario is dead");
                     System.exit(0);
                 }
 
                 // 判断游戏是否结束了
                 if (mario.isReachTower()) {
+                    new AePlayWave("src/com/mario/music/success.wav").start();
                     JOptionPane.showConfirmDialog(this, "Game is over");
                     System.exit(0);
                 }
@@ -159,7 +175,9 @@ public class Myframe extends JFrame implements KeyListener, Runnable {
                 throw new RuntimeException(e);
             }
         }
-
+    }
+    public void setAePlayWave(AePlayWave aePlayWave) {
+        this.aePlayWave = aePlayWave;
     }
 
 

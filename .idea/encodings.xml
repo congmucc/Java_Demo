@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" charset="GBK" />
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/com" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/han/Main.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/P0001_hello_world.java" charset="GBK" />
@@ -24,6 +23,7 @@
     <file url="file://$PROJECT_DIR$/src/com/han/p0412/AnonymousInnerClass.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/p0580_Thread/P0585_Thread.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/han/p0580_Thread/P0586_SellTicket.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/heima/io/FileInputStreamUse.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

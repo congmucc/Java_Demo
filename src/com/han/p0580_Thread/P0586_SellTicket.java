@@ -71,6 +71,8 @@ public class P0586_SellTicket {
 class SellTicket03 implements Runnable {
     private int ticketNum = 1000;// 让多个线程共享 ticketNum
     private boolean loop = true;
+
+
     public /*synchronized*/  void sell() { // 同步方法， 在同一时刻， 只能有一个线程来执行run方法
         synchronized (this) {
             if (ticketNum <= 0) {
@@ -80,18 +82,16 @@ class SellTicket03 implements Runnable {
             }
             System.out.println("窗口： " + Thread.currentThread().getName() + "售出一张票" + "剩余票数：" + (--ticketNum));
         }
-
     }
 
     public void run() {
         while (loop) {
             sell();
             try {
-                Thread.sleep(50);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
     }
-
 }

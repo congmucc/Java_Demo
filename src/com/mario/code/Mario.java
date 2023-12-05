@@ -31,6 +31,10 @@ public class Mario implements Runnable{
     // 判断马里奥是否死亡
     private boolean isDeath = false;
 
+    // 积分
+    private int score = 0;
+    // 用于转换音乐
+    Myframe myframe = null;
 
     public Mario() {
 
@@ -110,10 +114,14 @@ public class Mario implements Runnable{
     }
 
 
+
+
     // 马里奥跳跃
     public void jump() {
         // 判断是否处于跳跃状态   没有则返回-1
         if (status.indexOf("jump") == -1) {
+            // 跳跃背景音乐
+            new AePlayWave("src/com/mario/music/jump.wav").start();
             // 如果含有left则马里奥正在向左
             if (status.indexOf("left") != -1) {
                 status = "jump--left";
@@ -126,6 +134,7 @@ public class Mario implements Runnable{
             // 设置马里奥条约的高度为70 最后要与y轴相乘，这个是跳跃的时间
             upTime = 7;
         }
+
         // 判断马里奥是否碰到旗子
         if (backGround.isReach()) {
             ySpeed = 0;
@@ -149,6 +158,7 @@ public class Mario implements Runnable{
     public void death() {
         isDeath = true;
     }
+
 
 
 
@@ -197,6 +207,7 @@ public class Mario implements Runnable{
                     Obstacle ob = backGround.getObstacleList().get(i);
                     // 判断马里奥是否在障碍物上
                     if (ob.getY() == this.y + 25 && (ob.getX() > this.x - 30 && ob.getX() < this.x + 25)) {
+                       if (ob.getType() >= 5 && ob.getType() <= 6) continue;
                         onObstacle = true;
                     }
 
@@ -204,6 +215,7 @@ public class Mario implements Runnable{
                     if ((ob.getY() >= this.y - 30 && ob.getY() <= this.y - 20) && (ob.getX() > this.x - 30 && ob.getX() < this.x + 25)) {
                         // 判断顶到的砖块是否是普通砖块  是的话把他移出去
                         if (ob.getType() == 0) {
+                            this.score++;
                             backGround.getObstacleList().remove(ob);
                         }
                         upTime = 0;
@@ -214,7 +226,7 @@ public class Mario implements Runnable{
                         canRight = false;
                     }
                     // 判断是否可以往左走
-                    if (ob.getX() == this.x - 25 && (ob.getY() > this.y - 30 && ob.getY() < this.y + 25)) {
+                    if (ob.getX() == this.x - 30 && (ob.getY() > this.y - 30 && ob.getY() < this.y + 25)) {
                         canLeft = false;
                     }
                 }
@@ -226,6 +238,7 @@ public class Mario implements Runnable{
                     if (e.getY() == this.y + 20 && (e.getX() - 25 < this.x && e.getX() + 35 >= this.x)) {
                         // 如果是1，说明是蘑菇敌人，调用死亡函数
                         if (e.getType() == 1) {
+                            this.score++;
                             e.death();
                             upTime = 3;
                             ySpeed = -10;
@@ -353,5 +366,11 @@ public class Mario implements Runnable{
         return isDeath;
     }
 
+    public int getScore() {
+        return score;
+    }
+    public String getStatus() {
+        return status;
+    }
 
 }
